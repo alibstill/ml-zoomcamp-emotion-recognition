@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pandas = "==2.2.3"
+pillow = "*"
+numpy = "*"
+tensorflow = "*"
+
+[dev-packages]
+jupyter = "*"
+ipykernel = "*"
+matplotlib = "*"
+seaborn = "*"
+
+[requires]
+python_version = "3.11"
