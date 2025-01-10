@@ -8,6 +8,7 @@ pandas = "==2.2.3"
 pillow = "*"
 numpy = "*"
 tensorflow = "*"
+imagehash = "*"
 
 [dev-packages]
 jupyter = "*"
