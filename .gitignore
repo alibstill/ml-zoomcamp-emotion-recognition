@@ -2,7 +2,8 @@
 .ipynb_checkpoints/
 __pycache__
 
-**/data/FER-2013/**
+**/data/fer_2013/**
 **/data/clean_fer_2013/**
+**/data/fer_2013.zip
 **/learning_log/**
 **/draft/** 
