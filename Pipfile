@@ -9,6 +9,7 @@ pillow = "*"
 numpy = "*"
 tensorflow = "*"
 imagehash = "*"
+scikit-learn = "*"
 
 [dev-packages]
 jupyter = "*"
