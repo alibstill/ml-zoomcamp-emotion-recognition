@@ -1,8 +1,9 @@
 # Scripts
 
-In this section, you will find several scripts to: 
+In this section, you will find a couple of scripts: 
 
 - `train.py`: use to train and save a model built with our training dataset
+- `predict.py`: use to make a prediction for a trained model
 
 ## Data download and clean
 
@@ -26,8 +27,7 @@ Run the following in the root folder of this project:
 pipenv shell
 ```
 
-## Train xgboost 
-TODO: description
+## Train 
 
 To recreate my final model with the parameters that I found produced the best predictive results, run the following **within this directory**
 
