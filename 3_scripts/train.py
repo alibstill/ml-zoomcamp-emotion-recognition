@@ -191,7 +191,7 @@ def train_model(
     dense_layer_units=[64, 32],
     drop_rate=0,
     n_epochs=100,
-    use_class_weight=True,
+    use_class_weight=False,
     use_data_augmentation=True,
 ):
     """Train and validate model and save to file
@@ -296,13 +296,13 @@ def train_model(
 
     best_accuracy = 0
     best_epoch = 0
-    for idx, acc in history.history["val_accuracy"]:
+    for idx, acc in enumerate(history.history["val_accuracy"]):
         if acc > best_accuracy:
             best_accuracy = acc
             best_epoch = idx
 
     logger.info(
-        "The best model was found after %d epochs. It has a validation accuracy of %d",
+        "The best model was found after %d epochs. It has a validation accuracy of %.2f",
         best_epoch,
         best_accuracy,
     )
@@ -310,11 +310,11 @@ def train_model(
 
 if __name__ == "__main__":
     # Default Parameters
-    learning_rate_final = 0.001
-    dense_layer_units_final = [64, 32]
+    learning_rate_final = 0.0001
+    dense_layer_units_final = [128, 64]
     drop_rate_final = 0.0
     n_epochs_final = 100
-    use_class_weight_final = True
+    use_class_weight_final = False
     use_data_augmentation_final = True
 
     def list_of_ints(arg):
