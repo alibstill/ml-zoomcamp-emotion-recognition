@@ -14,19 +14,19 @@ The dataset was downloaded from [kaggle](https://www.kaggle.com/datasets/msambar
 This project documents the journey to creating the final prediction model and application.
 
 - [1_eda](1_eda/): exploratory data analysis
-- [2_model_training](2_model_training/): I trained, tuned and evaluated 3 different models 
+- [2_model_training](2_model_training/): model training and tuning
 - [3_scripts](3_scripts/): contains scripts to train the final model and get predictions
-- [4_fastapi_containerization](4_fastapi_containerization/): contains the fastapi app
+- [4_fastapi_containerization](4_fastapi_containerization/): contains the prediction service
 
 ## The final app
 
 ### Running the final app
 
-Navigate to the [4_fastapi_containerization](4_fastapi_containerization/) folder and run:
+The `docker-compose` file is in the [4_fastapi_containerization](4_fastapi_containerization/) folder.
 
 ```bash
 cd 4_fastapi_containerization
 docker-compose up -d
 ```
 
-Once running, navigate to `http://localhost:8060/docs` to view and test out the API.
+Once running, navigate to `http://localhost:9696/docs` to view and test out the API.

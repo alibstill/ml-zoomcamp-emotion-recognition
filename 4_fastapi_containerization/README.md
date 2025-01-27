@@ -19,7 +19,7 @@ Please make sure you upload a `.jpg`.
 
 ### Validation and Error handling
 
-Please note that this is currently a very simple app with little error handling or validation at the moment. It is up to the user to choose a suitable file format and file.
+Please note that this is currently a very simple app with little error handling or validation. It is up to the user to choose a suitable file format and file.
 
 
 
