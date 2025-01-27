@@ -43,11 +43,11 @@ If you want to run this script from the root directory:
 
 The **default parameters are the final tuned parameters**:
 
-- `learning_rate` = 0.001
-- `dense_layer_units` = [64, 32]
+- `learning_rate` = 0.0001
+- `dense_layer_units` = [128, 64]
 - `drop_rate` = 0.0
 - `n_epochs` = 100
-- `use_class_weight` = True
+- `use_class_weight` = False
 - `use_data_augmentation` = True
 
 
@@ -89,3 +89,37 @@ If you do not want to add any additional dense layers and stick to having one si
 python train.py --learning_rate=0.0001 --dense_layer_units=0 --drop_rate=0.8 --n_epochs=30 --no-use_class_weight --no-use_data_augmentation
 ```
 
+## Predict
+You can use the predict script to make a prediction with the model.
+
+If you run the script without any arguments, it will load my final model and use the [happy image example](./example_happy.jpg) as input.
+
+```bash
+python predict.py # from this directory
+python 3_scripts/predict.py # from root folder
+```
+
+**validation**
+
+Note that I have not done any validation for these scripts. In particular, I have not validated the input json. It is up to the user to choose suitable values.
+
+**help**
+
+```bash
+python predict.py -h 
+```
+
+### Parameterization (optional)
+The following parameters can be passed into the script:
+- model_file_path: filepath to another model file
+- image_file_path: filepath to another image file
+
+```bash
+python 3_scripts/predict.py --image_file_path="3_scripts/example_angry.jpg" --model_file_path="2_model_training/er_final_with_aug_94_0.566.keras"
+```
+
+### Image Credits
+Both test images were freely available for download from [pexels](https://www.pexels.com/).
+
+- [happy image](https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400)
+- [angry image](https://images.pexels.com/photos/8727561/pexels-photo-8727561.jpeg?auto=compress&cs=tinysrgb&w=400)
