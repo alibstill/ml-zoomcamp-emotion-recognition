@@ -1,0 +1,17 @@
+
+services:
+  emotion_recognition_model:
+    build: 
+      context: .
+      dockerfile: image-model.dockerfile
+    environment:
+      - MODEL_NAME=emotion_recognition_model
+      - TF_CPP_MIN_VLOG_LEVEL=1
+  gateway:
+    build:
+      context: .
+      dockerfile: image-gateway.dockerfile
+    environment:
+      - TF_SERVING_HOST=emotion_recognition_model:8500
+    ports:
+      - "9696:9696"

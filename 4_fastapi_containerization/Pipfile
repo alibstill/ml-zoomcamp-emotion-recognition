@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+grpcio = "==1.42.0"
+gunicorn = "*"
+tensorflow-protobuf = "==2.7.0"
+pillow = "*"
+fastapi = "*"
+uvicorn = "*"
+numpy = "*"
+tensorflow-serving-api = "==2.7.0"
+python-multipart = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
