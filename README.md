@@ -30,3 +30,7 @@ docker-compose up -d
 ```
 
 Once running, navigate to `http://localhost:9696/docs` to view and test out the API.
+
+### Demonstration
+
+A demonstration of the FastAPI service is available on [loom](https://www.loom.com/share/3e0c1a1c2f94481b97ddfb195cbccb4d?sid=38defda1-2675-4683-937e-655f059df7be).
